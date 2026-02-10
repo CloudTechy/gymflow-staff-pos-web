@@ -140,7 +140,7 @@ export default function DashboardPage() {
                 <div>
                   <p className="text-gray-600">Started:</p>
                   <p className="font-semibold">
-                    {currentShift.startTime.toLocaleString()}
+                    {new Date(currentShift.startTime).toLocaleString()}
                   </p>
                 </div>
                 <div>

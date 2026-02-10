@@ -24,7 +24,7 @@ export default function Cart() {
     setIsProcessing(true);
     try {
       const sale: Sale = {
-        id: `sale-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+        id: `sale-${Date.now()}-${Math.random().toString(36).slice(2, 11)}`,
         items,
         total: getTotal(),
         paymentMethod,

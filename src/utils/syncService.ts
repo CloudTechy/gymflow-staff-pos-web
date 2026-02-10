@@ -59,8 +59,11 @@ export const syncService = {
   },
 
   async addSaleToQueue(sale: Sale): Promise<void> {
+    // Generate a UUID-like ID for better uniqueness
+    const timestamp = Date.now();
+    const random = Math.random().toString(36).slice(2, 11);
     const queueItem: SyncQueueItem = {
-      id: `sync-${Date.now()}-${Math.random()}`,
+      id: `sync-${timestamp}-${random}`,
       type: 'sale',
       action: 'create',
       data: sale,
